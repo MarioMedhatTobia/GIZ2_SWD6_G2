@@ -51,4 +51,12 @@ public class CartTest {
         Assert.assertEquals(errorMessageAdd, "Quantity should be positive");
 
     }
+    @org.testng.annotations.Test(priority = 5)
+    public void testChangeProductQuantityToZeroInCart(){
+        productDetails.changeProductQuantityToZeroInCart();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement successMessageRemoveText = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='order-summary-content']")));
+        String successMessageRemove = successMessageRemoveText.getText();
+        Assert.assertEquals(successMessageRemove, "Your Shopping Cart is empty!");
+    }
 }

@@ -1,32 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestCartAddChangeRemove"
-           tests="4"
+<testsuite name="DEPI-T3"
+           tests="5"
            failures="0"
            errors="0"
            skipped="0"
-           time="14.074">
+           time="23.105">
     <properties></properties>
 
 
 
             <testcase
                 name="testChangeProductQuantityInvalid"
-                time="2.070"
-                classname="cart.test.CartTest">
-            </testcase>
-            <testcase
-                name="testAddProductToCart"
-                time="8.594"
+                time="2.905"
                 classname="cart.test.CartTest">
             </testcase>
             <testcase
                 name="testChangeProductQuantityValid"
-                time="1.933"
+                time="1.616"
+                classname="cart.test.CartTest">
+            </testcase>
+            <testcase
+                name="testAddProductToCart"
+                time="11.106"
+                classname="cart.test.CartTest">
+            </testcase>
+            <testcase
+                name="testChangeProductQuantityToZeroInCart"
+                time="5.937"
                 classname="cart.test.CartTest">
             </testcase>
             <testcase
                 name="testRemoveProductFromCart"
-                time="1.477"
+                time="1.541"
                 classname="cart.test.CartTest">
             </testcase>
 </testsuite>
