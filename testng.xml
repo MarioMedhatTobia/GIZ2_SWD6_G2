@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
-<suite name="Cart">
-    <test verbose="1" name="UserCanAddAndRemoveCartItems">
+<suite name="ShoppingCart">
+    <test verbose="1" name="TestCartAddChangeRemove">
         <classes>
             <class name="cart.test.CartTest"/>
         </classes>

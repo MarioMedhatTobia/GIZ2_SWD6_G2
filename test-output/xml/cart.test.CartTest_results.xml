@@ -1,22 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="UserCanAddAndRemoveCartItems"
-           tests="2"
+<testsuite name="TestCartAddChangeRemove"
+           tests="4"
            failures="0"
            errors="0"
            skipped="0"
-           time="21.494">
+           time="14.074">
     <properties></properties>
 
 
 
             <testcase
-                name="addToCart"
-                time="19.820"
+                name="testChangeProductQuantityInvalid"
+                time="2.070"
                 classname="cart.test.CartTest">
             </testcase>
             <testcase
-                name="removeFromCart"
-                time="1.674"
+                name="testAddProductToCart"
+                time="8.594"
+                classname="cart.test.CartTest">
+            </testcase>
+            <testcase
+                name="testChangeProductQuantityValid"
+                time="1.933"
+                classname="cart.test.CartTest">
+            </testcase>
+            <testcase
+                name="testRemoveProductFromCart"
+                time="1.477"
                 classname="cart.test.CartTest">
             </testcase>
 </testsuite>
