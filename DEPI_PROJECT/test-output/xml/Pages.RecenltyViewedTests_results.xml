@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="DEPI_PROJECT"
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="25.365">
+    <properties></properties>
+
+
+
+            <testcase
+                name="ClearCasheTest"
+                time="2.813"
+                classname="Pages.RecenltyViewedTests">
+            </testcase>
+            <testcase
+                name="ProductsDisplayedTest"
+                time="12.781"
+                classname="Pages.RecenltyViewedTests">
+            </testcase>
+            <testcase
+                name="AddToCartTest"
+                time="9.771"
+                classname="Pages.RecenltyViewedTests">
+            </testcase>
+</testsuite>
