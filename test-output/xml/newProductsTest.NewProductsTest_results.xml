@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Mario"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="6.656">
+    <properties></properties>
+
+
+
+            <testcase
+                name="ClickOnNewProducts"
+                time="6.656"
+                classname="newProductsTest.NewProductsTest">
+            </testcase>
+</testsuite>
