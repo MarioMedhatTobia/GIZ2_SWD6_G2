@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Final_Project_demowebshop"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="15.009">
+    <properties></properties>
+
+
+
+            <testcase
+                name="CategoriesFeaturesTest"
+                time="14.273"
+                classname="categories.CategoriesTest">
+            </testcase>
+            <testcase
+                name="verifyCategoryPageUIElementsTest"
+                time="0.736"
+                classname="categories.CategoriesTest">
+            </testcase>
+</testsuite>
