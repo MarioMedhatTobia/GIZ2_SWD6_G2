@@ -1,28 +1,30 @@
 package Pages;
 
+import Utilities.selenium.DriverFactory;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 
-import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import static Utilities.selenium.DriverFactory.driver;
+
 
 public class Search {
-  WebDriver driver = new ChromeDriver();
 
-    public void searchWithValidCredintials() {
+    public void searchWithValidCredintials() throws InterruptedException {
+        driver = DriverFactory.getDriver();
+        driver.manage().window().maximize();
         driver.get("https://demowebshop.tricentis.com/");
         driver.findElement(By.id("small-searchterms")).sendKeys("Simple Computer");
         driver.findElement(By.xpath("//input[@class='button-1 search-box-button']")).click();
-        List<WebElement> products = driver.findElements(By.cssSelector(".product-title a"));
+        Thread.sleep(2000);
+        List<WebElement> products = driver.findElements(By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div/div[2]/div[3]/div[1]/div[1]"));
         System.out.println(" Number of products found: " + products.size());
 
         for (WebElement product : products) {
@@ -30,25 +32,28 @@ public class Search {
             System.out.println("Product: " + productName);
 
             Assert.assertTrue(productName.contains("Simple Computer"),
-                    "Invalid product found: " + productName);
+                    "Valid product found: " + productName);
         }
     }
 
-    public void searchWithNonExist() {
+    public void searchWithNonExist() throws InterruptedException {
         driver.get("https://demowebshop.tricentis.com/");
         driver.findElement(By.id("small-searchterms")).sendKeys("/////");
         driver.findElement(By.xpath("//input[@class='button-1 search-box-button']")).click();
+        Thread.sleep(2000);
         String expectedMessage = "No products were found that matched your criteria.";
-        String actualMessage = driver.findElement(By.xpath("//strong[@class='result']")).getText();
-        Assert.assertEquals(actualMessage, expectedMessage, "Search result message does not match!");
+        String actualMessage = driver.findElement(By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div/div[2]/div[3]/strong")).getText();
+        Assert.assertEquals(actualMessage, expectedMessage, "\n" +
+                "                    No products were found that matched your criteria.\n" +
+                "                ");
     }
 
-    public void searchWithOneWord() {
+    public void searchWithOneWord() throws InterruptedException {
         driver.get("https://demowebshop.tricentis.com/");
         driver.findElement(By.id("small-searchterms")).sendKeys("computer");
         driver.findElement(By.xpath("//input[@class='button-1 search-box-button']")).click();
-
-        List<WebElement> products = driver.findElements(By.cssSelector(".product-title a"));
+        Thread.sleep(2000);
+        List<WebElement> products = driver.findElements(By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div/div[2]/div[3]/div[1]/div[1]"));
         System.out.println(" Number of products found: " + products.size());
 
         for (WebElement product : products) {
@@ -59,22 +64,22 @@ public class Search {
                     "Invalid product found: " + productName);
         }
     }
-    public void searchCaseInsensitive() {
+    public void searchCaseInsensitive() throws InterruptedException {
         driver.get("https://demowebshop.tricentis.com/");
         driver.findElement(By.id("small-searchterms")).sendKeys("computer");
         driver.findElement(By.xpath("//input[@class='button-1 search-box-button']")).click();
-        List<WebElement> lowerCaseResults = driver.findElements(By.cssSelector(".product-title a"));
+        Thread.sleep(2000);
+        List<WebElement> lowerCaseResults = driver.findElements(By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div/div[2]/div[3]/div[1]/div[1]"));
 
         int lowerCaseCount = lowerCaseResults.size();
         List<String> lowerCaseProductNames = new ArrayList<>();
         for (WebElement product : lowerCaseResults) {
             lowerCaseProductNames.add(product.getText());
         }
-        driver.get("https://demowebshop.tricentis.com/");
         driver.findElement(By.id("small-searchterms")).sendKeys("COMPUTER");
         driver.findElement(By.xpath("//input[@class='button-1 search-box-button']")).click();
-
-        List<WebElement> upperCaseResults = driver.findElements(By.cssSelector(".product-title a"));
+        Thread.sleep(2000);
+        List<WebElement> upperCaseResults = driver.findElements(By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div/div[2]/div[3]/div[1]/div[1]"));
         int upperCaseCount = upperCaseResults.size();
         List<String> upperCaseProductNames = new ArrayList<>();
         for (WebElement product : upperCaseResults) {
@@ -88,12 +93,13 @@ public class Search {
         System.out.println("Case-insensitive search test passed!");
     }
 
-    public void SortAZAfterSearch() {
+    public void SortAZAfterSearch() throws InterruptedException {
         driver.get("https://demowebshop.tricentis.com/");
         driver.findElement(By.id("small-searchterms")).sendKeys("computer");
         driver.findElement(By.xpath("//input[@class='button-1 search-box-button']")).click();
+        Thread.sleep(2000);
         driver.findElement(By.id("products-orderby")).sendKeys("Name: A to Z");
-        List<WebElement> productElements = driver.findElements(By.cssSelector(".product-title a"));
+        List<WebElement> productElements = driver.findElements(By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div/div[2]/div[3]/div[1]/div[1]"));
         List<String> actualProductNames = new ArrayList<>();
         for (WebElement product : productElements) {
             actualProductNames.add(product.getText());
@@ -106,15 +112,13 @@ public class Search {
 
         System.out.println(" Sorting from A-Z test passed!");
     }
-    public void SortHighLowAfterSearch() {
+    public void SortHighLowAfterSearch() throws InterruptedException {
         driver.get("https://demowebshop.tricentis.com/");
         driver.findElement(By.id("small-searchterms")).sendKeys("computer");
         driver.findElement(By.xpath("//input[@class='button-1 search-box-button']")).click();
+        Thread.sleep(2000);
         driver.findElement(By.id("products-orderby")).sendKeys("Price: High to Low");
-
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".actual-price")));
-
+        Thread.sleep(2000);
         List<WebElement> priceElements = driver.findElements(By.cssSelector(".actual-price"));
 
         List<Double> actualPrices = new ArrayList<>();
@@ -141,40 +145,43 @@ public class Search {
         System.out.println("Sorting from High - Low test passed!");
     }
 
-    public void searchDisplay4() {
+    public void searchDisplay4() throws InterruptedException {
         driver.get("https://demowebshop.tricentis.com/");
         driver.findElement(By.id("small-searchterms")).sendKeys("computer");
         driver.findElement(By.xpath("//input[@class='button-1 search-box-button']")).click();
+        Thread.sleep(2000);
         driver.findElement(By.id("products-pagesize")).sendKeys("4");
-        List<WebElement> productNo = driver.findElements(By.cssSelector(".product-title a"));
+        Thread.sleep(2000);
+        List<WebElement> productNo = driver.findElements(By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div/div[2]/div[3]/div[1]/div[1]"));
 
         Assert.assertEquals(productNo.size(), 4,
                 "Mismatch in product count for case-sensitive search!");
         System.out.println("Case-insensitive search test passed!");
     }
-    public void searchDisplay8() {
+    public void searchDisplay8() throws InterruptedException {
         driver.get("https://demowebshop.tricentis.com/");
         driver.findElement(By.id("small-searchterms")).sendKeys("computer");
         driver.findElement(By.xpath("//input[@class='button-1 search-box-button']")).click();
+        Thread.sleep(2000);
         driver.findElement(By.id("products-pagesize")).sendKeys("8");
-        List<WebElement> productNo = driver.findElements(By.cssSelector(".product-title a"));
+        List<WebElement> productNo = driver.findElements(By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div/div[2]/div[3]/div[1]/div[1]"));
 
         Assert.assertEquals(productNo.size(), 8,
                 "Mismatch in product count for case-sensitive search!");
         System.out.println("Case-insensitive search test passed!");
     }
-    public void searchDisplay12() {
+    public void searchDisplay12() throws InterruptedException {
         driver.get("https://demowebshop.tricentis.com/");
         driver.findElement(By.id("small-searchterms")).sendKeys("computer");
         driver.findElement(By.xpath("//input[@class='button-1 search-box-button']")).click();
+        Thread.sleep(2000);
         driver.findElement(By.id("products-pagesize")).sendKeys("12");
-        List<WebElement> productNo = driver.findElements(By.cssSelector(".product-title a"));
+        List<WebElement> productNo = driver.findElements(By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div/div[2]/div[3]/div[1]/div[1]"));
 
         Assert.assertEquals(productNo.size(), 12,
                 "Mismatch in product count for case-sensitive search!");
         System.out.println("Case-insensitive search test passed!");
     }
-
 }
 
 
