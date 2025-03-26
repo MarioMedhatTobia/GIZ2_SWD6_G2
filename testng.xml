@@ -5,6 +5,11 @@
             <class name="TestCases.CompareProductsTest"/>
         </classes>
     </test>
+    <test verbose="1" name="AddressTests">
+        <classes>
+            <class name="TestCases.AddressTest"/>
+        </classes>
+    </test>
     <listeners>
         <listener class-name="io.qameta.allure.testng.AllureTestNg" />
     </listeners>
