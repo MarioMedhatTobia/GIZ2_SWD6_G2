@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="The Wishlist Function">
+    <test verbose="5" name="Whishlist">
+        <classes>
+            <class name="wishlist.test.WishlistTest"/>
+        </classes>
+    </test>
+</suite>
