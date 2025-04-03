@@ -9,7 +9,7 @@ import static Utilities.selenium.DriverFactory.driver;
 public class Login {
 
     public void loginWithValidCredentials() {
-        //driver = DriverFactory.getDriver();
+        driver = DriverFactory.getDriver();
         driver.get("https://demowebshop.tricentis.com/");
         driver.findElement(By.xpath("//a[@class='ico-login']")).click();
         driver.findElement(By.id("Email")).sendKeys(Constant.loginValidEmail);
