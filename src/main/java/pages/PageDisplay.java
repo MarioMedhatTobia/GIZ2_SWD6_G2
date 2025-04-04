@@ -6,24 +6,24 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.List;
-
 import static utilities.seleinum.DriverFactory.driver;
 public class PageDisplay {
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-    public void changeProductsPerPage(int count) {
+    public void changeProductsPerPage() {
         // Step 1: Navigate to the "Apparel and Shoes" category directly
-         driver.findElement(By.xpath("//li[@class='active']//a[normalize-space()='Apparel & Shoes']")).click();
+         driver.findElement(By.xpath("/html[1]/body[1]/div[4]/div[1]/div[4]/div[1]/div[1]/div[2]/ul[1]/li[4]/a[1]")).click();
+        driver.findElement(By.id("products-pagesize")).sendKeys("12");
 
-        // Step 2: Locate the dropdown for products per page
-        WebElement dropdown = driver.findElement(By.id("products-pagesize"));
 
-        // Use the Select class to choose the desired option
-        Select select = new Select(dropdown);
-        select.selectByValue(String.valueOf(count)); // Select the value matching the count
-
-        // Wait until the dropdown reflects the correct selection
-        new WebDriverWait(driver, Duration.ofSeconds(10))
-                .until(ExpectedConditions.attributeToBe(dropdown, "value", String.valueOf(count)));
+//        // Step 2: Locate the dropdown for products per page
+//        WebElement dropdown = driver.findElement(By.id("products-pagesize"));
+//
+//        // Use the Select class to choose the desired option
+//        Select select = new Select(dropdown);
+//        select.selectByValue(String.valueOf(count)); // Select the value matching the count
+//
+//        // Wait until the dropdown reflects the correct selection
+//        new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.attributeToBe(dropdown, "value", String.valueOf(count)));
 }
 // Count the number of displayed products on the page
     public int getDisplayedProductCount() {

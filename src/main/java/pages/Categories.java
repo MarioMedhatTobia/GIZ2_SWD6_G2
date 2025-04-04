@@ -30,7 +30,6 @@ public class Categories {
         driver.findElement(By.id("products-viewmode")).isDisplayed();
         driver.findElement(By.xpath("//div[@class='page category-page']//li[1]//a[1]")).isDisplayed();
     }
-    //public void verifyBreadcrumbNavigation(){}
     }
 
 

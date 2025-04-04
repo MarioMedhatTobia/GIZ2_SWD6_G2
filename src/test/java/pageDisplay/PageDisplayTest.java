@@ -1,13 +1,14 @@
 package pageDisplay;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 import pages.PageDisplay;
 public class PageDisplayTest {
     final PageDisplay pageDisplay = new PageDisplay();
-    @org.testng.annotations.Test(priority=1)
+    @Test
     public void changeProductsPerPageTest() {
 
         // Step 2: Change the product display to 12 per page
-        pageDisplay.changeProductsPerPage(12);
+        pageDisplay.changeProductsPerPage();
 
         // Step 3: Get the number of displayed products
         int displayedProductCount = pageDisplay.getDisplayedProductCount();

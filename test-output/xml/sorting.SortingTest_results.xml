@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Final_Project_demowebshop"
-           tests="1"
+<testsuite name="Sorting"
+           tests="3"
            failures="0"
            errors="0"
            skipped="0"
-           time="7.559">
+           time="9.270">
     <properties></properties>
 
 
 
             <testcase
+                name="verifySortingByNameAToZTest"
+                time="2.528"
+                classname="sorting.SortingTest">
+            </testcase>
+            <testcase
                 name="verifySortingByPriceLowToHighTest"
-                time="7.559"
+                time="3.662"
+                classname="sorting.SortingTest">
+            </testcase>
+            <testcase
+                name="verifySortingByPriceHighToLowTest"
+                time="3.080"
                 classname="sorting.SortingTest">
             </testcase>
 </testsuite>

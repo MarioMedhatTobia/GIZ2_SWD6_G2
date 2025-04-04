@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Final_Project_demowebshop"
+<testsuite name="Categories"
            tests="2"
            failures="0"
            errors="0"
            skipped="0"
-           time="15.009">
+           time="19.124">
     <properties></properties>
 
 
 
             <testcase
                 name="CategoriesFeaturesTest"
-                time="14.273"
+                time="17.755"
                 classname="categories.CategoriesTest">
             </testcase>
             <testcase
                 name="verifyCategoryPageUIElementsTest"
-                time="0.736"
+                time="1.369"
                 classname="categories.CategoriesTest">
             </testcase>
 </testsuite>
