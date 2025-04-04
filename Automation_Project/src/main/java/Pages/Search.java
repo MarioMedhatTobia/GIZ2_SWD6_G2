@@ -149,38 +149,46 @@ public class Search {
         driver.get("https://demowebshop.tricentis.com/");
         driver.findElement(By.id("small-searchterms")).sendKeys("computer");
         driver.findElement(By.xpath("//input[@class='button-1 search-box-button']")).click();
-        Thread.sleep(2000);
-        driver.findElement(By.id("products-pagesize")).sendKeys("4");
-        Thread.sleep(2000);
-        List<WebElement> productNo = driver.findElements(By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div/div[2]/div[3]/div[1]/div[1]"));
 
-        Assert.assertEquals(productNo.size(), 4,
-                "Mismatch in product count for case-sensitive search!");
-        System.out.println("Case-insensitive search test passed!");
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement pageSizeDropdown = wait.until(ExpectedConditions.elementToBeClickable(By.id("products-pagesize")));
+        pageSizeDropdown.sendKeys("4");
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".product-item")));
+        List<WebElement> productNo = driver.findElements(By.cssSelector(".product-item"));
+
+        Assert.assertEquals(productNo.size(), 4, "Mismatch in product count for page size 4!");
+        System.out.println("Product display count test passed!");
     }
     public void searchDisplay8() throws InterruptedException {
         driver.get("https://demowebshop.tricentis.com/");
         driver.findElement(By.id("small-searchterms")).sendKeys("computer");
         driver.findElement(By.xpath("//input[@class='button-1 search-box-button']")).click();
-        Thread.sleep(2000);
-        driver.findElement(By.id("products-pagesize")).sendKeys("8");
-        List<WebElement> productNo = driver.findElements(By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div/div[2]/div[3]/div[1]/div[1]"));
 
-        Assert.assertEquals(productNo.size(), 8,
-                "Mismatch in product count for case-sensitive search!");
-        System.out.println("Case-insensitive search test passed!");
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement pageSizeDropdown = wait.until(ExpectedConditions.elementToBeClickable(By.id("products-pagesize")));
+        pageSizeDropdown.sendKeys("8");
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".product-item")));
+        List<WebElement> productNo = driver.findElements(By.cssSelector(".product-item"));
+
+        Assert.assertEquals(productNo.size(), 8, "Mismatch in product count for page size 8!");
+        System.out.println("Product display count test passed!");
     }
     public void searchDisplay12() throws InterruptedException {
         driver.get("https://demowebshop.tricentis.com/");
         driver.findElement(By.id("small-searchterms")).sendKeys("computer");
         driver.findElement(By.xpath("//input[@class='button-1 search-box-button']")).click();
-        Thread.sleep(2000);
-        driver.findElement(By.id("products-pagesize")).sendKeys("12");
-        List<WebElement> productNo = driver.findElements(By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div/div[2]/div[3]/div[1]/div[1]"));
 
-        Assert.assertEquals(productNo.size(), 12,
-                "Mismatch in product count for case-sensitive search!");
-        System.out.println("Case-insensitive search test passed!");
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement pageSizeDropdown = wait.until(ExpectedConditions.elementToBeClickable(By.id("products-pagesize")));
+        pageSizeDropdown.sendKeys("12");
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".product-item")));
+        List<WebElement> productNo = driver.findElements(By.cssSelector(".product-item"));
+
+        Assert.assertEquals(productNo.size(), 12, "Mismatch in product count for page size 12!");
+        System.out.println("Product display count test passed!")
     }
 }
 
