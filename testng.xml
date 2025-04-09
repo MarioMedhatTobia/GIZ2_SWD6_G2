@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Categories and ProductPage">
+<suite name="Categories and PLP Features">
     <test verbose="1" name="Categories">
         <classes>
             <class name="categories.CategoriesTest"/>

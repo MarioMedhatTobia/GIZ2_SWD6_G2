@@ -8,7 +8,7 @@ import static utilities.seleinum.DriverFactory.driver;
 public class Sorting {
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     public void verifySortingByPriceLowToHigh(){
-        driver.findElement(By.xpath("//li[@class='active']//a[normalize-space()='Books']")).click();
+        driver.findElement(By.xpath("/html[1]/body[1]/div[4]/div[1]/div[4]/div[1]/div[1]/div[2]/ul[1]/li[1]/a[1]")).click();
         driver.findElement(By.id("products-orderby")).sendKeys("Position");
         driver.findElement(By.id("products-orderby")).sendKeys("Price: Low to High");
     }
