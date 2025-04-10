@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="DemoWebshopCheckout">
+
+    <suite name="CheckoutasGuest">
+        <test verbose="1" name="CheckoutasGuest">
+            <classes>
+                <class name="checkOut.CheckOutTest" />
+            </classes>
+        </test>
+    </suite>
+
+
+</suite>

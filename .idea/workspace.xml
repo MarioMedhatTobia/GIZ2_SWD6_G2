@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14ef8759-3cf6-48a0-817f-0baa2e99314e" name="Changes" comment="setting up the base" />
+    <list default="true" id="4b966c18-ce46-4912-b779-4ca33b72c8c9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/checkOut.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/checkOutLoggedin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Utilities/Selenium/DriverFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/CheckOutTest/CheckOutTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/checkoutLiTest/loggedInTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,46 +32,12 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <excluded-from-favorite>
-      <branch-storage>
-        <map>
-          <entry type="LOCAL">
-            <value>
-              <list>
-                <branch-info repo="$PROJECT_DIR$" source="master" />
-              </list>
-            </value>
-          </entry>
-        </map>
-      </branch-storage>
-    </excluded-from-favorite>
-    <favorite-branches>
-      <branch-storage>
-        <map>
-          <entry type="LOCAL">
-            <value>
-              <list>
-                <branch-info repo="$PROJECT_DIR$" source="Mario-Medhat" />
-              </list>
-            </value>
-          </entry>
-        </map>
-      </branch-storage>
-    </favorite-branches>
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="master" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 3
+  &quot;associatedIndex&quot;: 1
 }</component>
-  <component name="ProjectId" id="2uYkf6cFsoAgJ5K2qoX4sX8j1Sv" />
+  <component name="ProjectId" id="2vB6L8H6aW2CDqjm62y0I2HGENP" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -66,111 +46,58 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "TestNG.D:/software testing/Mario/testing.xml.executor": "Run",
-    "TestNG.LoginTest.executor": "Run",
-    "TestNG.NewProductsTest.executor": "Run",
-    "TestNG.OrdersTest.executor": "Run",
-    "TestNG.SearchTest.executor": "Run",
-    "TestNG.ShoppingCartTest.executor": "Run",
-    "git-widget-placeholder": "Mario-Medhat",
-    "ignore.virus.scanning.warn.message": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TestNG.CheckOutTest.executor": "Run",
+    "TestNG.loggedInTest.executor": "Run",
+    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/software testing/DEPI-T3/Mario-Medhat",
-    "onboarding.tips.debug.path": "D:/software testing/Mario/src/main/java/io/Demo/Main.java",
-    "project.structure.last.edited": "Problems",
+    "last_opened_file_path": "E:/Depi 2/Technical/Chat_Gpt",
+    "onboarding.tips.debug.path": "E:/Depi 2/Technical/Chat_Gpt/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "vcs.Git"
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="SvnConfiguration">
-    <configuration>C:\Users\mario\AppData\Roaming\Subversion</configuration>
+  <component name="RunManager">
+    <configuration name="CheckOutTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Chat_Gpt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="CheckOutTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="CheckOutTest" />
+      <option name="MAIN_CLASS_NAME" value="CheckOutTest.CheckOutTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.CheckOutTest" />
+      </list>
+    </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="14ef8759-3cf6-48a0-817f-0baa2e99314e" name="Changes" comment="" />
-      <created>1742432998870</created>
+      <changelist id="4b966c18-ce46-4912-b779-4ca33b72c8c9" name="Changes" comment="" />
+      <created>1743606063289</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1742432998870</updated>
+      <updated>1743606063289</updated>
     </task>
-    <task id="LOCAL-00001" summary="setting up the base">
-      <option name="closed" value="true" />
-      <created>1742544853990</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1742544853991</updated>
-    </task>
-    <task id="LOCAL-00002" summary="setting up the base">
-      <option name="closed" value="true" />
-      <created>1742864273378</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1742864273378</updated>
-    </task>
-    <task id="LOCAL-00003" summary="setting up the base">
-      <option name="closed" value="true" />
-      <created>1742864302643</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1742864302643</updated>
-    </task>
-    <task id="LOCAL-00004" summary="setting up the base">
-      <option name="closed" value="true" />
-      <created>1742864329277</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1742864329277</updated>
-    </task>
-    <task id="LOCAL-00005" summary="setting up the base">
-      <option name="closed" value="true" />
-      <created>1742864334359</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1742864334359</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="Mario-Medhat" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="changing the base" />
-    <MESSAGE value="setting up the base" />
-    <option name="LAST_COMMIT_MESSAGE" value="setting up the base" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/io/Demo/Main.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
           <line>13</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
