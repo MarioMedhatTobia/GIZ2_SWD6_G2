@@ -1,8 +1,8 @@
 package Pages;
 
 import Utilities.Selenium.DriverFactory;
-import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -11,12 +11,9 @@ import java.time.Duration;
 
 import static Utilities.Selenium.DriverFactory.driver;
 
-public class checkOut {
-
-    public void checkOut() {
-
+public class notrequiredField {
+    public void notrequiredMeth(){
         //Open browser
-
         driver = DriverFactory.getDriver();
         driver.get("https://demowebshop.tricentis.com/");
 
@@ -38,7 +35,7 @@ public class checkOut {
         driver.findElement(By.id("BillingNewAddress_FirstName")).sendKeys("John");//First name
         driver.findElement(By.id("BillingNewAddress_LastName")).sendKeys("Doe");//Last name
         driver.findElement(By.id("BillingNewAddress_Email")).sendKeys("demoweb@pokemail.net");//Email
-        driver.findElement(By.id("BillingNewAddress_Company")).sendKeys("Meta");//Company
+        //driver.findElement(By.id("BillingNewAddress_Company"));//Company
         WebElement countryDropdown = driver.findElement(By.xpath("//select[@id='BillingNewAddress_CountryId']"));
         Select select = new Select(countryDropdown);
         select.selectByVisibleText("France");//Country dropdown
@@ -49,22 +46,5 @@ public class checkOut {
         driver.findElement(By.id("BillingNewAddress_PhoneNumber")).sendKeys("04 42 75 02 03");//Phone no
         driver.findElement(By.id("BillingNewAddress_FaxNumber")).sendKeys("43.426719");//Fax no
         driver.findElement(By.cssSelector("input[onclick='Billing.save()']")).click();
-
-        //shipping address
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#PickUpInStore"))).click();
-        driver.findElement(By.cssSelector("input[onclick='Shipping.save()']")).click();
-
-        //Payment method
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#paymentmethod_0")));
-        driver.findElement(By.cssSelector("input[class='button-1 payment-method-next-step-button']")).click();
-
-        //payment info
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input[class='button-1 payment-info-next-step-button']"))).click();
-
-        //Confirmation
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input[value='Confirm']"))).click();
-
-
     }
-
 }
