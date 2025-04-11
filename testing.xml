@@ -2,18 +2,14 @@
 
 
 <suite name="OrderScenario">
-    <test verbose="1" name="Login">
+    <test verbose="1" name="Orders">
         <classes>
-            <class name="loginTest.LoginTest"/>
+            <class name="ordersTest.OrdersTest"/>
         </classes>
     </test>
-    <test verbose="2" name="Shopping">
-            <classes>
-                <class name="shoppingCartTest.ShoppingCartTest"/>
-            </classes>
-    </test>
-<!--    <listeners>-->
-<!--        <listener class-name="io.qameta.allure.testng.AllureTestNg" />-->
-<!--    </listeners>-->
+
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg" />
+    </listeners>
 </suite>
 
